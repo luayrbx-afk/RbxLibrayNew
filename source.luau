@@ -55,7 +55,7 @@ local function MakeDraggable(gui)
 end
 
 --// CONSTRUTOR DA JANELA PRINCIPAL
-function Crate.windows(name)
+function Crate:windows(name)
     local WindowObj = {
         Name = name,
         MainColor = Color3.fromRGB(20, 20, 20),
@@ -157,7 +157,7 @@ function Crate.windows(name)
     WindowObj.MainFrame = MainFrame
     WindowObj.SideBar = SideBar
     WindowObj.ContentHolder = ContentHolder
-    
+    setmetatable(WindowObj, {__index = Crate})
     return WindowObj
 end
 --// SISTEMA DE CRIAÇÃO DE ÁREA (TAB)
