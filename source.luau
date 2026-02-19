@@ -1,4 +1,4 @@
---[[
+z--[[
     CRATE UI LIBRARY - 2026
     SISTEMA MODULAR DE UI PARA ROBLOX
 ]]
@@ -333,11 +333,7 @@ function Crate:CreateArea(name)
         end)
     end
 
-    return AreaObj
-end
-
--- Aliases para bater com o seu exemplo
-Crate.area = Crate.CreateArea
+    
 --// COMPONENTE: BUTTON
 function AreaObj:Button(name, callback)
     local ButtonFrame = Instance.new("Frame")
@@ -438,7 +434,6 @@ function AreaObj:Toggle(name, default, callback)
         update()
     end
 end
-
 --// COMPONENTE: DROPDOWN
 function AreaObj:Dropdown(name, list, callback)
     local expanded = false
@@ -641,7 +636,6 @@ function AreaObj:Slider(name, min, max, default, callback)
         callback(val)
     end
 end
-
 --// COMPONENTE: TEXTBOX
 function AreaObj:Textbox(name, placeholder, default, callback)
     local TextFrame = Instance.new("Frame")
@@ -684,7 +678,6 @@ function AreaObj:Textbox(name, placeholder, default, callback)
         callback(val)
     end
 end
-
 --// COMPONENTE: CODEBOX (WINDOW STYLE)
 function AreaObj:CodeBox(name, default, placeholder, callback)
     local CodeFrame = Instance.new("Frame")
@@ -841,6 +834,13 @@ function AreaObj:ColorPicker(name, callback)
         callback(color)
     end
 end
+
+
+return AreaObj
+end
+-- Aliases para bater com o seu exemplo
+Crate.area = Crate.CreateArea
+
 
 --// FUNÇÕES GLOBAIS DE CONTROLO (MODIFICAR ELEMENTOS PELO NOME)
 function Crate:TurnToggle(name, state)
