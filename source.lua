@@ -1,4 +1,4 @@
-z--[[
+--[[
     CRATE UI LIBRARY v2 - 2026
     SISTEMA MODULAR DE UI PARA ROBLOX
 ]]
